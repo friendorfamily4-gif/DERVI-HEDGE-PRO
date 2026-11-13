@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101827"><meta name="description" content="Deriv Hedge Pro — compare two contract outcomes before you trade.">
+  <title>Deriv Hedge Pro</title><style>
+:root{--bg:#0b1220;--panel:#111c2e;--panel2:#16243a;--line:#26364d;--text:#edf3fb;--muted:#93a4ba;--green:#4adea0;--blue:#69a8ff;--red:#ff7e86;--gold:#f3c66b}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#182b48 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.topbar{height:72px;border-bottom:1px solid #24334a;display:flex;align-items:center;justify-content:space-between;padding:0 max(22px,calc((100% - 1120px)/2));background:#0b1220eF;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--text);font-size:13px;letter-spacing:.12em}.brand b{color:#91baff}.brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#3478d9,#173c72);font-weight:800;letter-spacing:-.04em}.top-actions{display:flex;align-items:center;gap:9px}.status-dot,.live-tag i{width:8px;height:8px;background:var(--green);border-radius:50%;display:inline-block}.status-label{font-size:12px;color:var(--muted);margin-right:9px}.container{max-width:1120px;margin:auto;padding:44px 22px 24px}.hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:30px}.eyebrow{font-size:10px;letter-spacing:.18em;color:#83b5ff;font-weight:800;margin:0 0 9px}.hero h1{font-size:clamp(34px,5vw,54px);letter-spacing:-.055em;line-height:1.08;margin:0}.hero h1 span{color:#8bb8ff}.hero-copy{max-width:580px;color:var(--muted);margin:15px 0 0}.hero-chip{display:flex;gap:12px;align-items:center;padding:13px 17px;border:1px solid var(--line);border-radius:14px;background:#122139;min-width:170px}.chip-icon{font-size:25px;color:var(--green)}.hero-chip b,.hero-chip small{display:block}.hero-chip small{color:var(--muted);font-size:11px}.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}.summary-card,.panel{border:1px solid var(--line);background:linear-gradient(145deg,#142239,#101a2a);border-radius:17px}.summary-card{padding:18px 20px}.summary-label{font-size:10px;letter-spacing:.15em;color:var(--muted);font-weight:800;display:block}.summary-card strong{font-size:26px;display:block;margin:4px 0 0;letter-spacing:-.04em}.summary-card small{color:var(--muted);font-size:11px}.positive{color:var(--green)}.negative{color:var(--red)}.panel{padding:25px;margin-bottom:18px}.section-heading,.results-heading{display:flex;justify-content:space-between;align-items:center;gap:14px}.section-heading h2,.results-heading h2,.connect-copy h2{font-size:20px;letter-spacing:-.025em;margin:0}.text-btn{background:none;border:0;color:#8ebaff;font-weight:700;font-size:12px;padding:8px;cursor:pointer}.hint{color:var(--muted);font-size:12px;margin:10px 0 20px}.hint b{color:#dce8f7}.contract-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.contract-card{background:#0d1727;border:1px solid #293b54;border-radius:14px;padding:18px}.contract-title{display:flex;align-items:center;gap:11px;margin-bottom:18px}.contract-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:900}.icon-a{background:#173a68;color:#8bbaff}.icon-b{background:#173e37;color:#76e5b4}.contract-title h3{font-size:15px;margin:0}.contract-title p{font-size:11px;color:var(--muted);margin:1px 0 0}.contract-card label{display:flex;justify-content:space-between;color:#c6d3e3;font-size:11px;font-weight:650;margin:13px 0 6px}.contract-card label span{color:#71839c;font-size:9px;letter-spacing:.1em}.money-input{display:flex;align-items:center;background:#15243a;border:1px solid #30445f;border-radius:9px;padding:0 12px;height:44px;color:#8196b1}.money-input:focus-within{border-color:#6eaaff;box-shadow:0 0 0 3px #438ce522}.money-input input{width:100%;min-width:0;background:none;border:0;outline:0;color:#fff;font:600 15px inherit;padding:10px}.money-input input::-webkit-inner-spin-button{opacity:.4}.contract-net{display:flex;justify-content:space-between;gap:8px;border-top:1px solid #24364e;margin-top:16px;padding-top:12px;font-size:10px;color:var(--muted)}.contract-net b{color:var(--green);font-size:12px}.results-heading{margin:29px 0 12px}.live-tag{font-size:10px;color:var(--green);display:flex;align-items:center;gap:7px}.outcome-list{border:1px solid #293a52;border-radius:12px;overflow:hidden}.outcome-row{display:flex;justify-content:space-between;align-items:center;padding:12px 15px;background:#0e1929;border-bottom:1px solid #22334a;gap:12px}.outcome-row:last-child{border-bottom:0}.outcome-row b,.outcome-row small{display:block}.outcome-row b{font-size:12px}.outcome-row small{font-size:10px;color:var(--muted);margin-top:2px}.outcome-row strong{font-size:15px;font-variant-numeric:tabular-nums}.disclaimer{display:flex;gap:10px;padding:12px 14px;background:#30281966;border:1px solid #66512d;border-radius:10px;margin-top:14px;color:#e9d6ad}.disclaimer span{font-size:17px}.disclaimer p{font-size:10px;line-height:1.55;margin:0}.connect-panel{display:flex;align-items:center;gap:15px}.connect-symbol,.modal-mark{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:#f2c94c;color:#132037;font-weight:950;font-size:23px}.connect-copy{flex:1}.connect-copy p:last-child{font-size:11px;color:var(--muted);margin:4px 0 0}.btn{border:0;border-radius:9px;padding:11px 17px;font-weight:750;font-size:12px;cursor:pointer}.btn-primary{background:#76aaff;color:#081426}.btn-outline{border:1px solid #3a506d;background:#15243a;color:#e8f1fc}.btn-small{padding:8px 12px}.btn:active,.text-btn:active{transform:translateY(1px)}footer{display:flex;justify-content:space-between;gap:15px;color:#71839b;font-size:10px;padding:14px 3px}.modal{max-width:420px;width:calc(100% - 32px);border:1px solid #3a4d67;border-radius:18px;background:#142239;color:var(--text);padding:26px;box-shadow:0 25px 80px #000a}.modal::backdrop{background:#030813bb;backdrop-filter:blur(4px)}.modal-close{position:absolute;right:14px;top:10px;background:none;border:0;color:#aebdd0;font-size:25px}.modal-mark{margin-bottom:18px}.modal h2{margin:0 0 9px}.modal p:not(.eyebrow){color:var(--muted);font-size:12px}.modal-ok{width:100%;margin-top:10px}@media(max-width:700px){.topbar{height:62px;padding:0 15px}.brand{font-size:11px;letter-spacing:.08em}.brand-mark{width:32px;height:32px}.status-label{display:none}.container{padding:30px 14px 18px}.hero{align-items:flex-start}.hero-chip{display:none}.hero h1{font-size:39px}.summary-grid{gap:8px}.summary-card{padding:13px 11px}.summary-card strong{font-size:20px}.summary-card small{font-size:9px}.summary-label{font-size:8px}.panel{padding:17px 13px}.contract-grid{grid-template-columns:1fr;gap:11px}.section-heading h2,.results-heading h2,.connect-copy h2{font-size:18px}.connect-panel{flex-wrap:wrap}.connect-copy{min-width:calc(100% - 65px)}.connect-panel>.btn{width:100%}footer{flex-direction:column;gap:4px}.outcome-row{padding:12px}.outcome-row strong{font-size:14px}}@media(max-width:360px){.summary-card strong{font-size:17px}.brand{font-size:10px}.btn-small{padding:7px 9px}}
+
+.mode-switch{display:flex;gap:8px;margin:18px 0 10px;flex-wrap:wrap}.mode-btn{border:1px solid var(--line);background:transparent;color:var(--muted);padding:10px 16px;border-radius:10px;font:inherit;font-weight:700;cursor:pointer}.mode-btn.active{background:rgba(75,135,255,.14);border-color:var(--blue);color:var(--text)}.mode-help{font-size:.88rem;color:var(--muted);padding:11px 13px;border-radius:10px;background:rgba(255,255,255,.035);margin-bottom:16px}.hidden{display:none!important}.quote-meta{display:flex;justify-content:space-between;gap:8px;font-size:.78rem;color:var(--muted);margin-top:9px}.quote-meta b{color:var(--green)}.break-even{margin-top:16px;padding:13px 15px;border:1px solid var(--line);border-radius:12px;color:var(--muted);font-size:.9rem;line-height:1.5}.demo-badge{display:inline-block;margin-top:8px;padding:4px 8px;border-radius:6px;background:#174b3c;color:#8af0c3;font-size:9px;font-weight:800;letter-spacing:.08em}.demo-tools{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin:12px 0;padding:11px;background:#102b29;border:1px solid #235448;border-radius:10px;font-size:11px;color:#a8c8bd}.demo-preset{border:1px solid #397866;background:#153d34;color:#c8f5e5;border-radius:7px;padding:6px 9px;font-size:10px;font-weight:700}
+
+
+.analyser-controls{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:end}.analyser-controls label{display:block;color:#c6d3e3;font-size:11px;font-weight:700;margin-bottom:6px}.analyser-controls input,.analyser-controls select{width:100%;height:42px;background:#15243a;border:1px solid #30445f;border-radius:9px;color:#fff;padding:0 10px;font:inherit}.analyser-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}.analyser-stat{background:#0d1727;border:1px solid #293b54;border-radius:12px;padding:14px}.analyser-stat small{display:block;color:var(--muted);font-size:10px}.analyser-stat strong{display:block;font-size:23px;margin-top:4px}.digit-bars{display:grid;gap:9px;margin-top:12px}.digit-bar{display:grid;grid-template-columns:18px 1fr 60px;gap:9px;align-items:center;font-size:11px}.digit-track{height:10px;background:#25364c;border-radius:20px;overflow:hidden}.digit-fill{height:100%;background:#6da8ff;border-radius:20px}.digit-fill.top{background:var(--green)}.tick-strip{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}.tick-chip{min-width:27px;text-align:center;border:1px solid #30445f;background:#15243a;border-radius:6px;padding:5px 3px;font-size:11px}.tick-chip.latest{border-color:var(--green);color:var(--green)}.analyser-note{font-size:11px;color:var(--muted);line-height:1.55;margin-top:12px}.analyser-status{font-size:11px;color:var(--muted);margin-top:12px}.analyser-status.connected{color:var(--green)}.analyser-status.error{color:var(--red)}@media(max-width:700px){.analyser-controls{grid-template-columns:1fr 1fr}.analyser-controls button{grid-column:1/-1;width:100%}.analyser-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Deriv Hedge Pro home"><span class="brand-mark">DH</span><span>DERIV <b>HEDGE PRO</b></span></a>
+    <div class="top-actions"><span class="status-dot"></span><span class="status-label" id="modeStatus">Calculator mode</span><button class="btn btn-outline btn-small" id="demoToggle" type="button">Activate Demo Mode</button><button class="btn btn-outline btn-small" id="loginBtn" type="button">Connect Deriv</button></div>
+  </header>
+  <main id="top" class="container">
+    <section class="hero">
+      <div><p class="eyebrow">PRIVATE TRADING WORKSPACE</p><h1>Plan both sides.<br><span>Know the numbers.</span></h1><p class="hero-copy">Compare two contract outcomes before placing a trade. This calculator does not place trades or guarantee profit.</p></div>
+      <div class="hero-chip"><span class="chip-icon">↗</span><span><b>Risk first</b><small>Check both outcomes</small></span></div>
+    </section>
+    <section class="summary-grid" aria-label="Combined stake summary">
+      <article class="summary-card"><span class="summary-label">TOTAL STAKE</span><strong id="totalStake">$0.00</strong><small>Contract A + Contract B</small></article>
+      <article class="summary-card"><span class="summary-label">BEST CASE</span><strong id="bestCase" class="positive">$0.00</strong><small>Both contracts win</small></article>
+      <article class="summary-card"><span class="summary-label">WORST CASE</span><strong id="worstCase" class="negative">-$0.00</strong><small>Both contracts lose</small></article>
+    </section>
+    <section class="panel">
+      <div class="section-heading"><div><p class="eyebrow">CONTRACT SETUP</p><h2>Enter your two contracts</h2><span id="demoBadge" class="demo-badge hidden">DEMO MODE · NO REAL TRADES</span></div><button id="resetBtn" class="text-btn" type="button">Reset values</button></div>
+      <p class="hint">Choose manual entry now, or connect Deriv to request live quotes. A quote is an estimate for the selected contract, not a guarantee of the final result.</p>
+      <div class="demo-tools hidden" id="demoTools"><span>Try sample outcomes:</span><button type="button" class="demo-preset" data-preset="balanced">Balanced</button><button type="button" class="demo-preset" data-preset="a">A wins</button><button type="button" class="demo-preset" data-preset="bothlose">Both lose</button></div><div class="mode-switch" role="group" aria-label="Quote mode"><button type="button" class="mode-btn active" id="manualMode">Manual mode</button><button type="button" class="mode-btn" id="autoMode">Automatic quotes</button></div>
+      <div id="manualHelp" class="mode-help">Enter each stake and the total payout shown by Deriv. Total payout includes the returned stake.</div>
+      <div id="autoHelp" class="mode-help hidden">Automatic quotes require a connected Deriv account and supported contract details. OAuth is not configured yet, so live quote requests are currently unavailable.</div>
+      <div class="contract-grid">
+        <article class="contract-card">
+          <div class="contract-title"><span class="contract-icon icon-a">A</span><div><h3>Contract A</h3><p>First position</p></div></div>
+          <label for="stakeA">Stake <span>USD</span></label><div class="money-input"><span>$</span><input id="stakeA" type="number" min="0" step="0.01" value="1" inputmode="decimal"></div>
+          <label for="payoutA">Total payout if it wins <span>USD</span></label><div class="money-input"><span>$</span><input id="payoutA" type="number" min="0" step="0.01" value="1.90" inputmode="decimal"></div><div class="quote-meta"><span>Quote status</span><b id="quoteStatusA">Manual value</b></div>
+          <div class="contract-net"><span>Net if A wins (before B result)</span><b id="netA">+$0.90</b></div>
+        </article>
+        <article class="contract-card">
+          <div class="contract-title"><span class="contract-icon icon-b">B</span><div><h3>Contract B</h3><p>Opposite / hedge position</p></div></div>
+          <label for="stakeB">Stake <span>USD</span></label><div class="money-input"><span>$</span><input id="stakeB" type="number" min="0" step="0.01" value="1" inputmode="decimal"></div>
+          <label for="payoutB">Total payout if it wins <span>USD</span></label><div class="money-input"><span>$</span><input id="payoutB" type="number" min="0" step="0.01" value="1.90" inputmode="decimal"></div><div class="quote-meta"><span>Quote status</span><b id="quoteStatusB">Manual value</b></div>
+          <div class="contract-net"><span>Net if B wins (before A result)</span><b id="netB">+$0.90</b></div>
+        </article>
+      </div>
+      <div class="results-heading"><div><p class="eyebrow">OUTCOME CHECKER</p><h2>What happens in each scenario?</h2></div><span class="live-tag"><i></i> Updates live</span></div>
+      <div class="outcome-list">
+        <div class="outcome-row"><div><b>A wins · B loses</b><small>A payout minus both stakes</small></div><strong id="scenarioA">-$0.10</strong></div>
+        <div class="outcome-row"><div><b>B wins · A loses</b><small>B payout minus both stakes</small></div><strong id="scenarioB">-$0.10</strong></div>
+        <div class="outcome-row"><div><b>Both win</b><small>Both payouts minus both stakes</small></div><strong id="scenarioBoth">+$1.80</strong></div>
+        <div class="outcome-row"><div><b>Both lose</b><small>Loss of both stakes</small></div><strong id="scenarioLose">-$2.00</strong></div>
+      </div>
+      <div class="break-even" id="breakEven">Break-even check will appear here.</div><div class="disclaimer"><span>ⓘ</span><p><b>Important:</b> These are arithmetic scenarios, not a prediction. Actual contract outcomes, fees, payout changes, execution timing and market movement can differ. A hedge can still lose money in every one-win scenario.</p></div>
+    </section>
+
+
+<section class="panel" id="scalperBot">
+ <div class="section-heading"><div><p class="eyebrow">AUTOMATED STRATEGY WORKSPACE</p><h2>Forex & Crypto Scalper</h2></div><span class="demo-badge">DEMO FIRST</span></div>
+ <p class="hint">One dashboard for Deriv Trader Multipliers and Deriv MT5 CFDs. Configure the strategy and risk controls here. This build is a setup and paper-planning interface; it does not yet send orders to either account.</p>
+ <div class="mode-switch" role="group" aria-label="Trading platform">
+  <button class="mode-btn active" type="button" id="scalpMultipliers">Deriv Trader · Multipliers</button>
+  <button class="mode-btn" type="button" id="scalpMT5">Deriv MT5 · CFDs</button>
+ </div>
+ <div class="mode-help" id="scalpPlatformHelp">Multipliers mode: directional Up/Down contracts with a defined stake, multiplier, take-profit and stop-loss.</div>
+ <div class="analyser-controls" style="grid-template-columns:1fr 1fr">
+  <div><label for="scalpAsset">Asset class</label><select id="scalpAsset"><option value="forex">Forex</option><option value="crypto">Cryptocurrencies</option></select></div>
+  <div><label for="scalpSymbol">Market</label><select id="scalpSymbol"><option value="frxEURUSD">EUR/USD</option><option value="frxGBPUSD">GBP/USD</option><option value="frxUSDJPY">USD/JPY</option><option value="frxAUDUSD">AUD/USD</option><option value="cryBTCUSD">Bitcoin / USD</option><option value="cryETHUSD">Ethereum / USD</option></select></div>
+  <div><label for="scalpMode">Account mode</label><select id="scalpMode"><option value="paper">Paper demo · simulated only</option><option value="demo">Deriv demo account · not connected</option><option value="real">Real account · locked</option></select></div>
+  <div><label for="scalpStrategy">Strategy</label><select id="scalpStrategy"><option value="ema">EMA 9 / EMA 21 trend cross</option><option value="rsi">RSI 14 pullback filter</option><option value="combined">EMA trend + RSI confirmation</option></select></div>
+ </div>
+ <div class="contract-grid" style="margin-top:14px">
+  <article class="contract-card">
+   <div class="contract-title"><span class="contract-icon icon-a">M</span><div><h3 id="scalpSizeTitle">Stake per trade</h3><p id="scalpSizeHelp">Multipliers contract stake</p></div></div>
+   <label for="scalpSize">Trade size <span id="scalpSizeUnit">USD</span></label><div class="money-input"><span>$</span><input id="scalpSize" type="number" min="0.35" step="0.01" value="1" inputmode="decimal"></div>
+   <label for="scalpMultiplier">Multiplier <span>Multipliers mode</span></label><div class="money-input"><input id="scalpMultiplier" type="number" min="1" max="2000" step="1" value="10" inputmode="numeric"></div>
+   <label for="scalpLeverage">MT5 lot size <span>CFD mode</span></label><div class="money-input"><input id="scalpLeverage" type="number" min="0.01" step="0.01" value="0.01" inputmode="decimal"></div>
+  </article>
+  <article class="contract-card">
+   <div class="contract-title"><span class="contract-icon icon-b">R</span><div><h3>Risk protection</h3><p>Limits for each paper strategy</p></div></div>
+   <label for="scalpTP">Take profit <span>ACCOUNT CURRENCY</span></label><div class="money-input"><span>$</span><input id="scalpTP" type="number" min="0.01" step="0.01" value="2" inputmode="decimal"></div>
+   <label for="scalpSL">Stop loss <span>ACCOUNT CURRENCY</span></label><div class="money-input"><span>$</span><input id="scalpSL" type="number" min="0.01" step="0.01" value="1" inputmode="decimal"></div>
+   <label for="scalpMaxTrades">Maximum trades per session <span>LIMIT</span></label><div class="money-input"><input id="scalpMaxTrades" type="number" min="1" max="50" step="1" value="5" inputmode="numeric"></div>
+  </article>
+ </div>
+ <div class="disclaimer"><span>ⓘ</span><p><b>Execution is not enabled yet.</b> Paper demo means simulated planning only, not a funded Deriv demo account. The Multipliers API can request quotes and buy authenticated contracts. MT5 CFDs require a separate MT5 Expert Advisor/bridge or supported MT5 integration. This standalone HTML cannot securely provide both live execution paths by itself.</p></div>
+ <div class="mode-switch">
+  <button class="btn btn-primary" type="button" id="scalpPaperBtn">Enable paper setup</button>
+  <button class="btn btn-outline" type="button" id="scalpStopBtn" disabled>Stop</button>
+ </div>
+ <div class="analyser-status" id="scalpStatus" role="status" aria-live="polite">Scalper is stopped. Choose a platform, market and risk limits, then enable paper setup.</div>
+ <div class="analyser-grid"><div class="analyser-stat"><small>SESSION STATUS</small><strong id="scalpSession">STOPPED</strong></div><div class="analyser-stat"><small>EXECUTION ROUTE</small><strong id="scalpRoute" style="font-size:15px">NOT CONNECTED</strong></div></div>
+ <div class="break-even"><b>Trade log</b><div id="scalpLog" style="margin-top:8px;color:var(--muted)">No trades. No orders have been sent.</div></div>
+</section>
+
+<section class="panel" id="matchesAnalyser">
+<div class="section-heading"><div><p class="eyebrow">LIVE MARKET OBSERVATION</p><h2>Matches digit analyser</h2></div><span class="live-tag"><i></i> Tick statistics</span></div>
+<p class="hint">Collect public market ticks and compare how often each last digit appeared in the sample. Historical frequency cannot predict or guarantee the next digit.</p>
+<div class="analyser-controls">
+<div><label for="analyserAppId">Deriv App ID (not required for public ticks)</label><input id="analyserAppId" inputmode="text" autocapitalize="characters" spellcheck="false" placeholder="Optional — public feed needs no App ID"></div>
+<div><label for="analyserSymbol">Market</label><select id="analyserSymbol"><option value="R_100">Volatility 100 Index</option><option value="R_75">Volatility 75 Index</option><option value="R_50">Volatility 50 Index</option><option value="R_25">Volatility 25 Index</option><option value="R_10">Volatility 10 Index</option></select></div>
+<button class="btn btn-primary" id="analyserConnect" type="button">Connect live ticks</button></div>
+<div class="analyser-status" id="analyserStatus" role="status" aria-live="polite">Not connected. Public market ticks do not require an App ID, password, or API token.</div>
+<div class="analyser-grid"><div class="analyser-stat"><small>TICKS COLLECTED</small><strong id="ticksCollected">0 / 100</strong></div><div class="analyser-stat"><small>MOST FREQUENT DIGIT(S)</small><strong id="topDigit">—</strong></div></div>
+<div class="results-heading"><div><p class="eyebrow">DIGIT FREQUENCY</p><h2>Digits 0–9</h2></div><button class="text-btn" id="clearAnalyser" type="button">Clear sample</button></div>
+<div class="digit-bars" id="digitBars"></div><div class="break-even" style="margin-top:16px"><b>Recent last digits</b><div class="tick-strip" id="recentDigits">Waiting for ticks…</div></div>
+<p class="analyser-note" id="analyserInsight">Connect to collect up to 100 ticks. Public market data only; frequency is descriptive, not a forecast.</p>
+</section>
+
+    <section class="panel connect-panel">
+      <div class="connect-symbol">D</div><div class="connect-copy"><p class="eyebrow">ACCOUNT CONNECTION</p><h2>Deriv account</h2><p id="connectionText">Not connected. OAuth setup is required before account data can be loaded.</p></div><button class="btn btn-primary" id="connectBottom" type="button">Connect account</button>
+    </section>
+    <footer><span>DERIV HEDGE PRO</span><span>Private workspace · Scalper setup / paper planning only</span></footer>
+  </main>
+  <dialog id="oauthDialog" class="modal"><form method="dialog"><button class="modal-close" aria-label="Close">×</button></form><div class="modal-mark">D</div><p class="eyebrow">DERIV OAUTH</p><h2>Secure account connection</h2><p>To enable login, the site owner must register a Deriv OAuth application and configure its approved redirect URL and secure server-side code exchange. This starter build does not ask for your Deriv password or API token. Demo Mode only simulates calculator scenarios; it does not connect to a Deriv demo account, fetch live quotes, or place trades.</p><button class="btn btn-primary modal-ok" id="modalOk" type="button">Got it</button></dialog>
+  <script>
+(() => {
+ const ids=['stakeA','payoutA','stakeB','payoutB'], el=id=>document.getElementById(id), value=id=>Math.max(0,parseFloat(el(id).value)||0);
+ const money=n=>`${n<0?'-$':'$'}${Math.abs(n).toFixed(2)}`, signed=n=>`${n>=0?'+':'-'}$${Math.abs(n).toFixed(2)}`;
+ const paint=(id,n)=>{const node=el(id);node.textContent=signed(n);node.classList.toggle('positive',n>=0);node.classList.toggle('negative',n<0)};
+ function calculate(){const a=value('stakeA'),pa=value('payoutA'),b=value('stakeB'),pb=value('payoutB'),total=a+b;const sc=[pa-total,pb-total,pa+pb-total,-total];el('totalStake').textContent=money(total);el('bestCase').textContent=money(Math.max(...sc));el('worstCase').textContent=money(Math.min(...sc));el('netA').textContent=signed(pa-a);el('netB').textContent=signed(pb-b);el('netA').style.color=pa-a>=0?'var(--green)':'var(--red)';el('netB').style.color=pb-b>=0?'var(--green)':'var(--red)';['scenarioA','scenarioB','scenarioBoth','scenarioLose'].forEach((id,i)=>paint(id,sc[i]));el('breakEven').textContent=total===0?'Enter stakes greater than zero to evaluate break-even.':Math.min(sc[0],sc[1])>=0?'Both one-contract-win scenarios are at or above break-even using the entered payouts. This does not guarantee either contract will win.':`Neither one-contract-win scenario breaks even. Smaller one-win loss: ${money(Math.min(sc[0],sc[1]))}. A's total payout must be at least ${money(total)} if only A wins; B's must be at least ${money(total)} if only B wins.`;}
+ ids.forEach(id=>el(id).addEventListener('input',calculate));el('resetBtn').addEventListener('click',()=>{el('stakeA').value='1';el('payoutA').value='1.90';el('stakeB').value='1';el('payoutB').value='1.90';calculate()});
+ const demoToggle=el('demoToggle');let demoActive=false;
+ function activateDemo(){demoActive=!demoActive;el('demoBadge').classList.toggle('hidden',!demoActive);el('demoTools').classList.toggle('hidden',!demoActive);demoToggle.textContent=demoActive?'Exit Demo Mode':'Activate Demo Mode';el('modeStatus').textContent=demoActive?'Demo mode · simulated values':'Calculator mode';if(demoActive){el('stakeA').value='1';el('payoutA').value='1.90';el('stakeB').value='1';el('payoutB').value='1.90';}calculate()}
+ demoToggle.addEventListener('click',activateDemo);
+ document.querySelectorAll('.demo-preset').forEach(btn=>btn.addEventListener('click',()=>{const p=btn.dataset.preset;if(p==='balanced'){el('stakeA').value='1';el('payoutA').value='2.10';el('stakeB').value='1';el('payoutB').value='2.10'}else if(p==='a'){el('stakeA').value='1';el('payoutA').value='2.40';el('stakeB').value='1';el('payoutB').value='1.20'}else{el('stakeA').value='1';el('payoutA').value='0';el('stakeB').value='1';el('payoutB').value='0'}calculate()}));
+ const dialog=el('oauthDialog'),openDialog=()=>dialog.showModal();function mode(m){const manual=m==='manual';el('manualMode').classList.toggle('active',manual);el('autoMode').classList.toggle('active',!manual);el('manualHelp').classList.toggle('hidden',!manual);el('autoHelp').classList.toggle('hidden',manual);['payoutA','payoutB'].forEach(id=>el(id).readOnly=!manual);if(!manual)openDialog()}
+ el('manualMode').addEventListener('click',()=>mode('manual'));el('autoMode').addEventListener('click',()=>mode('auto'));el('loginBtn').addEventListener('click',openDialog);el('connectBottom').addEventListener('click',openDialog);el('modalOk').addEventListener('click',()=>dialog.close());calculate();
+
+  (() => {
+    const $=id=>document.getElementById(id);
+    let ws=null,digits=[],counts=Array(10).fill(0),shouldRun=false,retryTimer=null,reconnectAttempts=0,connectionId=0;
+    const status=(s,c='')=>{$('analyserStatus').textContent=s;$('analyserStatus').className='analyser-status '+c};
+    function render(){
+      const max=Math.max(1,...counts),top=Math.max(...counts),leaders=counts.map((n,d)=>({n,d})).filter(x=>x.n===top&&top>0).map(x=>x.d);
+      $('ticksCollected').textContent=`${digits.length} / 100`;$('topDigit').textContent=digits.length?leaders.join(' / '):'—';
+      $('digitBars').innerHTML=counts.map((n,d)=>`<div class="digit-bar"><b>${d}</b><div class="digit-track"><div class="digit-fill ${n===top&&top>0?'top':''}" style="width:${n/max*100}%"></div></div><span>${n} · ${digits.length?(n/digits.length*100).toFixed(1):'0.0'}%</span></div>`).join('');
+      $('recentDigits').innerHTML=digits.slice(-20).reverse().map((d,i)=>`<span class="tick-chip ${i===0?'latest':''}">${d}</span>`).join('')||'Waiting for ticks…';
+      $('analyserInsight').textContent=digits.length?`Sample of ${digits.length} ticks. Most frequent digit(s): ${leaders.join(', ')} (${top} occurrence(s)). This is historical frequency, not a forecast.`:'Connect to collect up to 100 ticks. Public market data only; frequency is descriptive, not a forecast.';
+    }
+    function stopStream(message='Live tick stream stopped.'){
+      shouldRun=false;connectionId++;if(retryTimer){clearTimeout(retryTimer);retryTimer=null;}
+      const old=ws;ws=null;if(old){try{old.close(1000,'User stopped')}catch(e){}}
+      $('analyserConnect').textContent='Connect live ticks';status(message);
+    }
+    function scheduleReconnect(reason){
+      if(!shouldRun||digits.length>=100)return;
+      if(retryTimer)return;
+      reconnectAttempts++;
+      const delay=Math.min(8000,1000*Math.pow(2,Math.min(reconnectAttempts-1,3)));
+      status(`${reason} Reconnecting in ${Math.ceil(delay/1000)}s (attempt ${reconnectAttempts})…`,'error');
+      retryTimer=setTimeout(()=>{retryTimer=null;if(shouldRun&&digits.length<100)connectStream();},delay);
+    }
+    function connectStream(){
+      if(!shouldRun||digits.length>=100)return;
+      const thisConnection=++connectionId;
+      status(reconnectAttempts?`Reconnecting to live market data… (${digits.length}/100 saved)`:'Connecting to Deriv public market data…');
+      try{
+        // Public market-data stream; keep the existing sample when the socket reconnects.
+        const socket=new WebSocket('wss://api.derivws.com/trading/v1/options/ws/public');ws=socket;
+        socket.addEventListener('open',()=>{
+          if(thisConnection!==connectionId||!shouldRun){socket.close();return;}
+          reconnectAttempts=0;status('Connected. Waiting for ticks…','connected');
+          socket.send(JSON.stringify({ticks:$('analyserSymbol').value,subscribe:1}));
+        });
+        socket.addEventListener('message',ev=>{
+          if(thisConnection!==connectionId)return;
+          let m;try{m=JSON.parse(ev.data)}catch(e){return;}
+          if(m.error){status(`Deriv API error: ${m.error.message||'Unknown request error'}`,'error');return;}
+          if(m.msg_type==='tick'&&m.tick){
+            const q=Number(m.tick.quote),precision=Number.isInteger(m.tick.pip_size)?m.tick.pip_size:2;
+            if(!Number.isFinite(q))return;
+            const digitsOnly=q.toFixed(Math.max(0,Math.min(10,precision))).replace(/\D/g,'');
+            const d=Number(digitsOnly.slice(-1));if(!Number.isInteger(d))return;
+            digits.push(d);counts[d]++;if(digits.length>100){counts[digits.shift()]--;}render();
+            status(`Live tick stream · ${$('analyserSymbol').selectedOptions[0].text} · ${digits.length}/100`,'connected');
+            if(digits.length>=100){shouldRun=false;connectionId++;try{socket.close(1000,'Sample complete')}catch(e){}ws=null;$('analyserConnect').textContent='Connect live ticks';status('100 ticks collected. Sample complete.','connected');}
+          }
+        });
+        socket.addEventListener('error',()=>{if(thisConnection===connectionId)status('Temporary connection error. Retrying automatically…','error');});
+        socket.addEventListener('close',ev=>{
+          if(thisConnection!==connectionId)return;
+          ws=null;
+          if(shouldRun&&digits.length<100)scheduleReconnect(`Connection closed (code ${ev.code}${ev.reason?': '+ev.reason:''}).`);
+          else if(digits.length<100)status(`Connection closed (code ${ev.code}${ev.reason?': '+ev.reason:''}). Sample preserved.`,'error');
+        });
+      }catch(e){scheduleReconnect('Could not start the connection.');}
+    }
+    $('analyserConnect').addEventListener('click',()=>{
+      if(shouldRun){stopStream('Live tick collection paused. Your sample is saved.');return;}
+      if(digits.length>=100){status('100 ticks already collected. Tap Clear sample to start a new sample.','connected');return;}
+      shouldRun=true;reconnectAttempts=0;$('analyserConnect').textContent='Stop live ticks';connectStream();
+    });
+    $('clearAnalyser').addEventListener('click',()=>{digits=[];counts=Array(10).fill(0);render();status(ws?'Sample cleared. Collecting fresh ticks…':'Sample cleared. Not connected.')});
+    $('analyserSymbol').addEventListener('change',()=>{if(shouldRun){stopStream('Market changed. Tap Connect live ticks to start a fresh stream for the new market.');}});
+    render();
+  })();
+
+  // Scalper configuration UI: paper setup only; never sends a real or demo order.
+  (()=>{
+    const $=id=>document.getElementById(id);let platform='multipliers',running=false;
+    const setStatus=t=>{$('scalpStatus').textContent=t};
+    function updatePlatform(){
+      const mt5=platform==='mt5';
+      $('scalpMultipliers').classList.toggle('active',!mt5);$('scalpMT5').classList.toggle('active',mt5);
+      $('scalpPlatformHelp').textContent=mt5?'MT5 CFDs mode: lot-based positions with stop-loss, take-profit and position management. Requires an MT5 Expert Advisor/bridge for execution.':'Multipliers mode: directional Up/Down contracts with a defined stake, multiplier, take-profit and stop-loss.';
+      $('scalpSizeTitle').textContent=mt5?'Position sizing':'Stake per trade';$('scalpSizeHelp').textContent=mt5?'Paper account risk amount':'Multipliers contract stake';
+      $('scalpMultiplier').closest('label').style.opacity=mt5?'.45':'1';$('scalpMultiplier').style.opacity=mt5?'.45':'1';
+      $('scalpLeverage').closest('label').style.opacity=mt5?'1':'.45';$('scalpLeverage').style.opacity=mt5?'1':'.45';
+      $('scalpRoute').textContent=mt5?'MT5 BRIDGE NEEDED':'DERIV API AUTH NEEDED';
+    }
+    $('scalpMultipliers').addEventListener('click',()=>{platform='multipliers';updatePlatform()});
+    $('scalpMT5').addEventListener('click',()=>{platform='mt5';updatePlatform()});
+    $('scalpAsset').addEventListener('change',()=>{
+      const crypto=$('scalpAsset').value==='crypto';
+      $('scalpSymbol').innerHTML=crypto?'<option value="cryBTCUSD">Bitcoin / USD</option><option value="cryETHUSD">Ethereum / USD</option>':'<option value="frxEURUSD">EUR/USD</option><option value="frxGBPUSD">GBP/USD</option><option value="frxUSDJPY">USD/JPY</option><option value="frxAUDUSD">AUD/USD</option>';
+    });
+    $('scalpMode').addEventListener('change',()=>{
+      const m=$('scalpMode').value;
+      if(m==='real'){ $('scalpMode').value='paper';setStatus('Real account mode is locked in this build. Secure OAuth, backend risk controls and an explicit live-trading approval flow must be installed first.'); }
+      else if(m==='demo'){ $('scalpMode').value='paper';setStatus('A real Deriv demo account is not connected. Paper demo remains selected until the authenticated Deriv connection is implemented.'); }
+    });
+    $('scalpPaperBtn').addEventListener('click',()=>{
+      if(running){setStatus('Paper setup is already enabled.');return;}
+      const size=Number($('scalpSize').value),tp=Number($('scalpTP').value),sl=Number($('scalpSL').value),max=Number($('scalpMaxTrades').value);
+      if(!(size>0&&tp>0&&sl>0&&Number.isInteger(max)&&max>0)){setStatus('Check the trade size, take-profit, stop-loss and session trade limit. All must be greater than zero.');return;}
+      running=true;$('scalpSession').textContent='PAPER SETUP';$('scalpSession').style.color='var(--green)';$('scalpStopBtn').disabled=false;$('scalpPaperBtn').disabled=true;
+      const name=$('scalpSymbol').selectedOptions[0].text,mode=platform==='mt5'?'Deriv MT5 CFDs':'Deriv Trader Multipliers';
+      $('scalpLog').textContent=`Paper configuration active · ${mode} · ${name} · ${$('scalpStrategy').selectedOptions[0].text} · size $${size} · TP $${tp} / SL $${sl} · max ${max} trades. No market orders are being placed.`;
+      setStatus('Paper setup enabled. This is configuration-only: no price feed, simulated fill, Deriv demo order or real order is running.');
+    });
+    $('scalpStopBtn').addEventListener('click',()=>{running=false;$('scalpSession').textContent='STOPPED';$('scalpSession').style.color='';$('scalpStopBtn').disabled=true;$('scalpPaperBtn').disabled=false;setStatus('Paper setup stopped. No orders were sent.');});
+    updatePlatform();
+  })();
+})();
+</script>
+</body></html>
